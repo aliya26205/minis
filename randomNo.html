@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number</title>
+    <style>
+        h1{
+            display: block;
+            text-align: center;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        div{
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+        #roll{
+            padding: 10px;
+            font-size: medium;
+            border-radius: 8px;
+            background-color: coral;
+            color:aliceblue;
+            cursor: pointer;
+            transition: background-color 0.25;
+        }
+        #roll:hover{
+            background-color: rgb(137, 58, 1);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Random Number Generator:</h1>
+    <div>
+        <label>Enter Start Number:</label>
+        <input type="text" id="min"><br><br>
+        <label>Enter End Number:</label>
+        <input type="text" id="max"><br><br>
+        <button id="roll">ROLL</button>
+        <p id="ans"></p>
+    </div>
+    <script>
+
+        document.getElementById("roll").onclick = function () {
+            const min = Number(document.getElementById("min").value);
+            const max = Number(document.getElementById("max").value);
+            let random = Math.floor(Math.random() * (max - min + 1)) + min;
+            document.getElementById("ans").textContent = random;
+            console.log(random);
+        }
+    </script>
+</body>
+
+</html>

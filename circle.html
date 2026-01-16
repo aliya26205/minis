@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Circumfarance of circle</h1>
+    <label>Radius of circle:</label><br><br>
+    <input type="text" id="r">
+    <button id="Submit">Submit</button>
+    <p id="ans"></p>
+    <script>
+        const pi=3.14;
+        let r;
+        let circle;
+        document.getElementById("Submit").onclick=function(){
+            r=document.getElementById("r").value;
+            r=Number(r);
+            circle=2*pi*r;
+            document.getElementById("ans").textContent=`Circumferance of circle is ${circle}`; 
+            // document.getElementById("ans").textContent=`Circumferance of circle is`+circle; 
+        
+        }
+    </script>
+</body>
+</html>

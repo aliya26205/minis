@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        #count {
+            font-size: 10em;
+            display: block;
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #main{
+            text-align: center;
+        }
+        .btn{
+            padding: 10px;
+            font-size: 1.5em;
+            border-radius: 10px;
+            background-color: brown;
+            color: antiquewhite;
+            cursor: pointer;
+            transition: background-color 0.25s;
+        }
+        .btn:hover{
+            background-color: rgb(85, 22, 22);
+        }
+    </style>
+</head>
+
+<body>
+    <label id="count">0</label><br><br>
+    <div id="main">
+    <button id="dec" class="btn">Decrease</button>
+    <button id="reset" class="btn">Reset</button>
+    <button id="inc" class="btn">Increase</button>
+    </div>
+</body>
+<script>
+    let count = document.getElementById("count").value;
+    count = 0;
+    let dec;
+    let inc;
+
+    document.getElementById("dec").onclick = function () {
+        count--;
+        document.getElementById("count").textContent = count;
+    }
+
+    document.getElementById("inc").onclick = function () {
+        count++;
+        document.getElementById("count").textContent = count;
+    }
+    document.getElementById("reset").onclick = function () {
+        count = 0;
+        document.getElementById("count").textContent = count;
+    }
+</script>
+
+</html>
