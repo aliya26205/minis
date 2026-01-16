@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Do You Wish Me To Pay?</h1>
+    <div class="pay">
+        <label>What Do You Like About me?</label><br>
+        <input type="checkbox" id="myCheckbox1">
+        <label for="myCheckbox">My work</label>
+        <input type="checkbox" id="myCheckbox2">
+        <label for="myCheckbox">My face</label><br><br>
+    </div>
+    <div class="me">
+        <lable>How Do You Want me to pay??</lable><br>
+        <input type="radio" id="visa" name="card">Visa
+        <input type="radio" id="master" name="card">MasterCard
+        <input type="radio" id="paypal" name="card">Paypal<br><br>
+    </div>
+    <button id="submit">Submit</button>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+        const myCheckbox1 = document.getElementById("myCheckbox1");
+        const myCheckbox2 = document.getElementById("myCheckbox2");
+        const visa = document.getElementById("visa");
+        const master = document.getElementById("master");
+        const paypal = document.getElementById("paypal");
+        const p1 = document.getElementById("p1");
+        const p2 = document.getElementById("p2");
+        const submit = document.getElementById("submit");
+
+        document.getElementById("submit").onclick = function () {
+            if (myCheckbox1.checked || myCheckbox2.checked) {
+                if (myCheckbox1.checked) {
+                    p1.textContent = `So You like my work`;
+                }
+                 if (myCheckbox2.checked) {
+                    p1.textContent = `So You like my face`;
+                }
+                if (myCheckbox2.checked&& myCheckbox1.checked) {
+                    p1.textContent = `So You like my work and face`;
+                }
+            }else{
+                p1.textContent = `So You dont like anything about me sad!!`;
+            }
+            if(visa.checked){
+                p2.textContent = `yahh!! you are paying with visa card!!`;
+            }
+            else if(master.checked)
+            {
+                 p2.textContent = `yahh!! you are paying with mastercard!!`;   
+            }
+            else if(paypal.checked)
+            {
+                 p2.textContent = `yahh!! you are paying with paypalcard!!`;   
+            }
+            else{
+                p2.textContent=`You should pay mee!!`;
+            }
+        }
+    </script>
+</body>
+
+</html>

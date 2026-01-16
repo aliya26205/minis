@@ -14,8 +14,8 @@
     <label>Enter Driver's Age:</label>
     <input type="text" id="age"><br><br>
     <label>Do Driver Have License:</label>
-    <input type="radio" id="lice" value="1" name="lice">Yes
-    <input type="radio" id="lice" value="0" name="lice">No<br><br>
+    <input type="radio" id="lice" name="lice">Yes
+    <input type="radio" id="lice"  name="lice">No<br><br>
     <button id="submit">Submit</button>
     <p id="n"></p>
     <p id="s"></p>
@@ -30,7 +30,7 @@
             document.getElementById("n").textContent = `Name of Driver:${name}`;
             document.getElementById("s").textContent = `Age of Driver:${age}`;
             if (age >= 18) {
-                if (lice == 1) {
+                if (lice.checked) {
                     document.getElementById("r").textContent = `You are a valid Driver`;
                 }
                 else {
