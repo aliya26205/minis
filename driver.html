@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriverCheck</title>
+</head>
+
+<body>
+    <h1>Are You A Valid Driver?</h1>
+    <label>Enter Driver's Name:</label>
+    <input type="text" id="name"><br><br>
+    <label>Enter Driver's Age:</label>
+    <input type="text" id="age"><br><br>
+    <label>Do Driver Have License:</label>
+    <input type="radio" id="lice" value="1" name="lice">Yes
+    <input type="radio" id="lice" value="0" name="lice">No<br><br>
+    <button id="submit">Submit</button>
+    <p id="n"></p>
+    <p id="s"></p>
+    <p id="r"></p>
+    <script>
+
+        document.getElementById("submit").onclick = function () {
+            const name = document.getElementById("name").value;
+            const age = Number(document.getElementById("age").value);
+            const lice = Number(document.getElementById("lice").value);
+            console.log(lice);
+            document.getElementById("n").textContent = `Name of Driver:${name}`;
+            document.getElementById("s").textContent = `Age of Driver:${age}`;
+            if (age >= 18) {
+                if (lice == 1) {
+                    document.getElementById("r").textContent = `You are a valid Driver`;
+                }
+                else {
+                    document.getElementById("r").textContent = `You are not a valid Driver`;
+                }
+            } else {
+                document.getElementById("r").textContent = `You are not a valid Driver`;
+            }
+        }
+    </script>
+</body>
+
+</html>
