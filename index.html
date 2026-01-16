@@ -6,26 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome!!</h1>
-    <label>Username:</label><br><br>
-    <input type="text" id="name"><br><br>
-    <button id="greet">Submit</button>
-    <p id="wel"></p>
-    <script>
-        let username;
-       document.getElementById("greet").onclick=function(){
-          username=document.getElementById("name").value;
-          document.getElementById("wel").textContent=`Hello ${username}`;
-       }
-       let age=prompt("How old are you??");
-       age=Number(age);
-       //String(),Number(),Boolean()
-       age+=1;
-       console.log(age,typeof age);
-
-       //let
-       //var
-       //const= value cannot changed
-    </script>
+    <h1>My Mini Projects</h1>
+    <div class="mini">
+        <ul>
+            <li><a href="circle.html">Circumfarance of circle</a></li>
+            <li><a href="counter.html">Counter</a></li>
+            <li><a href="randomNo.html">Random Number Generator</a></li>
+        </ul>
+    </div>
 </body>
 </html>
